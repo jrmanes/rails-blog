@@ -1,4 +1,7 @@
 class ArticlesController < ApplicationController
+  # Add http basic auth
+  http_basic_authenticate_with name: "jr", password: "secret", except: [:index, :show]
+
   # Return all the articles
   def index
     @articles = Article.all
@@ -46,7 +49,6 @@ class ArticlesController < ApplicationController
 
     redirect_to root_path
   end
-
 
   private
     def article_params
