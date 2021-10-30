@@ -9,5 +9,7 @@ Rails.application.routes.draw do
   # get "/articles/:id", to: "articles#show"
 
   # Or use the keyword resources
-  resources :articles
+  resources :articles do
+    resources :comments
+  end
 end
