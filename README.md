@@ -45,7 +45,7 @@ rails --version
 
 ---
 ## Useful commands
-```
+```rails
 # Setup new app
 rails new blog
 
